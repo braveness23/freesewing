@@ -193,6 +193,13 @@
       "difficulty": 2,
       "tags": ["tops"]
     },
+    "dirk": {
+      "description": "A FreeSewing pattern that needs a description",
+      "code": "Coder name",
+      "design": "Designer name",
+      "difficulty": 1,
+      "tags": ["tagname"]
+    },
     "huey": {
       "description": "A FreeSewing pattern for a zip-up hoodie",
       "code": "Joost De Cock",
