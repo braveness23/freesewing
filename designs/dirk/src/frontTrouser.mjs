@@ -23,6 +23,10 @@ function draftFrontTrouser({
   points.waistOut = new Point(250, 0)
 
   paths.seam = new Path()
+  // additional points
+  points.waistX = new Point(measurements.waistFrontArc * (1 + options.waistEase), 0)
+  points.floor = new Point(0, measurements.waistToFloor * (1 + options.lengthBonus))
+
     .move(points.waistIn)
     .curve(points.crotchCurveCp1, points.crotchCurveCp2, points.crotchIn)
     .line(points.legInBottom)
