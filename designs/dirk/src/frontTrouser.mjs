@@ -78,7 +78,25 @@ function draftFrontTrouser({
 export const frontTrouser = {
   name: 'frontTrouser',
   options: {
-    size: { pct: 50, min: 10, max: 100, menu: 'fit' },
+    measurements: ['waist', 'waistToFloor'],
+    waistEase: {
+      pct: 1,
+      min: 0,
+      max: 5,
+      menu: 'fit',
+    },
+    lengthBonus: {
+      pct: 2,
+      min: -20,
+      max: 10,
+      menu: 'style',
+    },
+    crotchDrop: {
+      pct: 2,
+      min: 0,
+      max: 15,
+      menu: 'style',
+    },
   },
   plugins: [pluginBundle],
   draft: draftFrontTrouser,
