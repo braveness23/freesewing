@@ -1,23 +1,6 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
-function draftRearTrouser({
-  points,
-  Point,
-  paths,
-  Path,
-  options,
-  complete,
-  paperless,
-  measurements,
-  store,
-  macro,
-  utils,
-  snippets,
-  Snippet,
-  sa,
-  log,
-  part,
-}) {
+function draftRearTrouser({ points, Point, paths, Path, complete, paperless, macro, sa, part }) {
   points.waistOut = new Point(0, 0)
   points.crotchOut = new Point(0, 250)
   points.legOutBottom = new Point(30, 950)
