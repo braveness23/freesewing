@@ -48,14 +48,29 @@ function draftRearTrouser({
   // Paperless?
   if (paperless) {
     macro('hd', {
-      from: points.bottomLeft,
-      to: points.bottomRight,
-      y: points.bottomLeft.y + sa + 15,
+      from: points.waistIn,
+      to: points.waistOut,
+      y: points.waistIn.y + sa + 15,
+    })
+    macro('hd', {
+      from: points.crotchIn,
+      to: points.crotchOut,
+      y: points.crotchIn.y + sa,
+    })
+    macro('hd', {
+      from: points.legInBottom,
+      to: points.legOutBottom,
+      y: points.legInBottom.y + sa + 15,
     })
     macro('vd', {
-      from: points.bottomRight,
-      to: points.topRight,
-      x: points.topRight.x + sa + 15,
+      from: points.crotchOut,
+      to: points.waistOut,
+      x: points.crotchOut.x + sa + 15,
+    })
+    macro('vd', {
+      from: points.legOutBottom,
+      to: points.crotchOut,
+      x: points.legOutBottom.x + sa + 15,
     })
   }
 
