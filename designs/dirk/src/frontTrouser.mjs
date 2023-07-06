@@ -9,13 +9,8 @@ function draftFrontTrouser({
   complete,
   paperless,
   measurements,
-  store,
   macro,
-  utils,
-  snippets,
-  Snippet,
   sa,
-  log,
   part,
 }) {
   points.waistIn = new Point(0, 0)
