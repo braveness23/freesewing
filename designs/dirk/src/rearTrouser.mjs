@@ -1,6 +1,18 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
-function draftRearTrouser({ points, Point, paths, Path, complete, paperless, macro, sa, part }) {
+function draftRearTrouser({
+  points,
+  Point,
+  paths,
+  Path,
+  options,
+  complete,
+  paperless,
+  measurements,
+  macro,
+  sa,
+  part,
+}) {
   points.waistOut = new Point(0, 0)
   points.crotchOut = new Point(0, 250)
   points.legOutBottom = new Point(30, 950)
@@ -17,7 +29,7 @@ function draftRearTrouser({ points, Point, paths, Path, complete, paperless, mac
     .line(points.legInBottom)
     .line(points.crotchIn)
     .curve(points.crotchCurveCp2, points.crotchCurveCp1, points.waistIn)
-    //.line(points.waistIn)
+    .line(points.waistOut)
     .close()
     .attr('class', 'fabric')
 
@@ -62,6 +74,7 @@ function draftRearTrouser({ points, Point, paths, Path, complete, paperless, mac
 
 export const rearTrouser = {
   name: 'rearTrouser',
+  measurements: ['waist', 'waistToFloor'],
   options: {
     waistEase: {
       pct: 1,

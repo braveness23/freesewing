@@ -22,17 +22,18 @@ function draftFrontTrouser({
   points.crotchOut = new Point(250, 250)
   points.waistOut = new Point(250, 0)
 
-  paths.seam = new Path()
   // additional points
   points.waistX = new Point(measurements.waistFrontArc * (1 + options.waistEase), 0)
   points.floor = new Point(0, measurements.waistToFloor * (1 + options.lengthBonus))
 
+  paths.seam = new Path()
     .move(points.waistIn)
     .curve(points.crotchCurveCp1, points.crotchCurveCp2, points.crotchIn)
     .line(points.legInBottom)
     .line(points.legOutBottom)
     .line(points.crotchOut)
     .line(points.waistOut)
+    .line(points.waistIn)
     .close()
     .attr('class', 'fabric')
 
@@ -77,8 +78,8 @@ function draftFrontTrouser({
 
 export const frontTrouser = {
   name: 'frontTrouser',
+  measurements: ['waist', 'waistToFloor'],
   options: {
-    measurements: ['waist', 'waistToFloor'],
     waistEase: {
       pct: 1,
       min: 0,
