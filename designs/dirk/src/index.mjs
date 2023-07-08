@@ -6,12 +6,13 @@ import { data } from '../data.mjs'
 import { frontTrouser } from './frontTrouser.mjs'
 import { rearTrouser } from './rearTrouser.mjs'
 import { bib } from './bib.mjs'
+import { strap } from './strap.mjs'
 
 // Create new design
 const Dirk = new Design({
   data,
-  parts: [frontTrouser, rearTrouser, bib],
+  parts: [frontTrouser, rearTrouser, bib, strap],
 })
 
 // Named exports
-export { frontTrouser, rearTrouser, bib, Dirk }
+export { frontTrouser, rearTrouser, bib, strap, Dirk }
