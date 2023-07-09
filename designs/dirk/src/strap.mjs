@@ -23,7 +23,7 @@ function draftStrap({
     .line(points.bottomLeft)
     .line(points.bottomRight)
     .line(points.topRight)
-    .move(points.topLeft)
+    .line(points.topLeft)
     .close()
     .attr('class', 'fabric')
 
