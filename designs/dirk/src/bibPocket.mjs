@@ -1,5 +1,11 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
+export const bibPocket = {
+  name: 'bibPocket',
+  plugins: [pluginBundle],
+  draft: draftBibPocket,
+}
+
 function draftBibPocket({
   points,
   Point,
@@ -63,10 +69,4 @@ function draftBibPocket({
   }
 
   return part
-}
-
-export const bibPocket = {
-  name: 'bibPocket',
-  plugins: [pluginBundle],
-  draft: draftBibPocket,
 }

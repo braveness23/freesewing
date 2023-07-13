@@ -1,5 +1,20 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
+export const rearWaistBand = {
+  name: 'rearWaistBand',
+  //measurements: ['waist'],
+  options: {
+    waistEase: {
+      pct: 1,
+      min: 0,
+      max: 5,
+      menu: 'fit',
+    },
+  },
+  plugins: [pluginBundle],
+  draft: draftRearWaistBand,
+}
+
 function draftRearWaistBand({
   points,
   Point,
@@ -59,19 +74,4 @@ function draftRearWaistBand({
   }
 
   return part
-}
-
-export const rearWaistBand = {
-  name: 'rearWaistBand',
-  //measurements: ['waist'],
-  options: {
-    waistEase: {
-      pct: 1,
-      min: 0,
-      max: 5,
-      menu: 'fit',
-    },
-  },
-  plugins: [pluginBundle],
-  draft: draftRearWaistBand,
 }

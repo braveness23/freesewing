@@ -1,5 +1,32 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
+export const frontTrouser = {
+  name: 'frontTrouser',
+  measurements: ['waist', 'waistToFloor'],
+  options: {
+    waistEase: {
+      pct: 1,
+      min: 0,
+      max: 5,
+      menu: 'fit',
+    },
+    lengthBonus: {
+      pct: 2,
+      min: -20,
+      max: 10,
+      menu: 'style',
+    },
+    crotchDrop: {
+      pct: 2,
+      min: 0,
+      max: 15,
+      menu: 'style',
+    },
+  },
+  plugins: [pluginBundle],
+  draft: draftFrontTrouser,
+}
+
 function draftFrontTrouser({
   points,
   Point,
@@ -74,31 +101,4 @@ function draftFrontTrouser({
   }
 
   return part
-}
-
-export const frontTrouser = {
-  name: 'frontTrouser',
-  measurements: ['waist', 'waistToFloor'],
-  options: {
-    waistEase: {
-      pct: 1,
-      min: 0,
-      max: 5,
-      menu: 'fit',
-    },
-    lengthBonus: {
-      pct: 2,
-      min: -20,
-      max: 10,
-      menu: 'style',
-    },
-    crotchDrop: {
-      pct: 2,
-      min: 0,
-      max: 15,
-      menu: 'style',
-    },
-  },
-  plugins: [pluginBundle],
-  draft: draftFrontTrouser,
 }

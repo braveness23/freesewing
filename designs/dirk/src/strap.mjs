@@ -1,5 +1,20 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
+export const strap = {
+  name: 'strap',
+  //measurements: ['waist', 'waistToFloor'],
+  options: {
+    waistEase: {
+      pct: 1,
+      min: 0,
+      max: 5,
+      menu: 'fit',
+    },
+  },
+  plugins: [pluginBundle],
+  draft: draftStrap,
+}
+
 function draftStrap({
   points,
   Point,
@@ -59,19 +74,4 @@ function draftStrap({
   }
 
   return part
-}
-
-export const strap = {
-  name: 'strap',
-  //measurements: ['waist', 'waistToFloor'],
-  options: {
-    waistEase: {
-      pct: 1,
-      min: 0,
-      max: 5,
-      menu: 'fit',
-    },
-  },
-  plugins: [pluginBundle],
-  draft: draftStrap,
 }

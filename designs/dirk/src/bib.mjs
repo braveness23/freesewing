@@ -1,5 +1,20 @@
 import { pluginBundle } from '@freesewing/plugin-bundle'
 
+export const bib = {
+  name: 'bib',
+  //measurements: ['waist', 'waistToFloor'],
+  options: {
+    waistEase: {
+      pct: 1,
+      min: 0,
+      max: 5,
+      menu: 'fit',
+    },
+  },
+  plugins: [pluginBundle],
+  draft: draftBib,
+}
+
 function draftBib({
   points,
   Point,
@@ -64,19 +79,4 @@ function draftBib({
   }
 
   return part
-}
-
-export const bib = {
-  name: 'bib',
-  //measurements: ['waist', 'waistToFloor'],
-  options: {
-    waistEase: {
-      pct: 1,
-      min: 0,
-      max: 5,
-      menu: 'fit',
-    },
-  },
-  plugins: [pluginBundle],
-  draft: draftBib,
 }
