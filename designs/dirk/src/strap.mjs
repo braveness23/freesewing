@@ -44,6 +44,7 @@ function draftStrap({
 
   // Complete?
   if (complete) {
+    // TODO: Title here
     // TODO: Logo here
 
     if (sa) {
