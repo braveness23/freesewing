@@ -62,6 +62,8 @@ function draftRearTrouser({
 
   // Complete?
   if (complete) {
+    // TODO: Logo here
+
     if (sa) {
       paths.sa = paths.seam.offset(sa).attr('class', 'fabric sa')
     }
