@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.20",
-    "js-yaml": "4.1.0",
+    "js-yaml": "4.2.0",
     "postcss": "8.4.41",
     "remark-extract-frontmatter": "3.2.0",
     "remark-mdx-frontmatter": "4.0.0",
