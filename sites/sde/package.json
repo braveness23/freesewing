@@ -57,7 +57,7 @@
     "i18next": "23.12.1",
     "jotai": "2.10.0",
     "jotai-location": "0.5.5",
-    "js-yaml": "4.1.0",
+    "js-yaml": "4.2.0",
     "lodash.debounce": "^4.0.8",
     "lodash.get": "4.4.2",
     "lodash.orderby": "4.6.0",
